@@ -28,19 +28,15 @@ public class ArrayList<T> implements List<T> {
       arr = Arrays.copyOf(arr, max);
     }
 
-    arr[size] = item;
+    arr[pos] = item;
     size++;
   }
 
   public T get(int pos) {
-    assert pos >= 0 && pos <= size;
-
     return arr[pos];
   }
 
   public T remove(int pos) {
-    assert pos >= 0 && pos <= size;
-
     T item = arr[pos];
 
     for (int i = pos; i < pos - 1; i++) {
